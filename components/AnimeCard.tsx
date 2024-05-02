@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export interface AnimeProps {
+export interface AnimeProp {
   id: string;
   name: string;
   image: {
@@ -13,7 +13,7 @@ export interface AnimeProps {
 }
 
 interface Prop {
-  anime: AnimeProps;
+  anime: AnimeProp;
   index: number;
 }
 

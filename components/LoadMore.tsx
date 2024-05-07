@@ -23,12 +23,12 @@ function LoadMore({}: Props) {
 
   return (
     <>
-      <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+      <section className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10">
         {data.map((item: AnimeProp, index: number) => (
           <AnimeCard key={item.id} anime={item} index={index} />
         ))}
       </section>
-      <div ref={ref}>
+      <div ref={ref} className="flex justify-center items-center">
         <Image src="/spinner.svg" alt="loading" width={50} height={50} />
       </div>
     </>

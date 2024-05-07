@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anime List",
+  title: "Explore Animes",
   description: "The Best Animes all in one Place.",
 };
 

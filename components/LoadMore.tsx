@@ -11,9 +11,11 @@ export type AnimeCard = JSX.Element;
 function LoadMore() {
   const { ref, inView } = useInView();
   const [data, setData] = useState<AnimeCard[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (inView) {
+    if (inView && page <= 3) {
+      setIsLoading(true);
       fetchAnime(page).then((res) => {
         setData([...data, ...res]);
         page++;
@@ -21,13 +23,19 @@ function LoadMore() {
     }
   }, [inView, data]);
 
+  useEffect(() => {
+    setIsLoading(false);
+  }, [data]);
+
   return (
     <>
       <section className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10">
         {data}
       </section>
       <div ref={ref} className="flex justify-center items-center">
-        <Image src="/spinner.svg" alt="loading" width={50} height={50} />
+        {isLoading && inView && (
+          <Image src="/spinner.svg" alt="loading" width={50} height={50} />
+        )}
       </div>
     </>
   );

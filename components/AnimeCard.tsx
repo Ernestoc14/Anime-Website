@@ -22,7 +22,7 @@ const variants = {
   show: { opacity: 1 },
 };
 
-function AnimeCard({ anime }: Prop) {
+function AnimeCard({ anime, index }: Prop) {
   return (
     <MotionDiv
       variants={variants}
@@ -30,7 +30,7 @@ function AnimeCard({ anime }: Prop) {
       animate="show"
       transition={{
         duration: 0.5,
-        delay: 1,
+        delay: index * 0.3,
         ease: "easeInOut",
       }}
       viewport={{ amount: 0 }}

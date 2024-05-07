@@ -20,9 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="max-w-8xl mx-auto bg-[#0F1117]">
-          <Hero />
-          {children}
-          <Footer />
+          {/* This section will center the whole app */}
+          <section className="flex flex-col justify-center items-center">
+            <Hero />
+            {children}
+            <Footer />
+          </section>
         </main>
       </body>
     </html>

@@ -1,8 +1,8 @@
 "use client";
-import { fetchAnime } from "@/app/action";
 import Image from "next/image";
+import { fetchAnime } from "@/app/action";
 import { useEffect, useState } from "react";
-import { InView, useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 import AnimeCard, { AnimeProp } from "./AnimeCard";
 
 let page = 2;

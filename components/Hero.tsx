@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <header className="bg-center bg-hero bg-cover bg-no-repeat  py-16 px-8 flex justify-center lg:items-center max-lg:flex-col w-full sm:gap-16 gap-0">
+    <header className="bg-center bg-hero bg-cover bg-no-repeat py-16 px-8 flex justify-center lg:items-center max-lg:flex-col w-3/4 sm:gap-16 gap-6">
       <div className="flex flex-1 flex-col gap-10">
         <Image
           src="/logo.svg"
